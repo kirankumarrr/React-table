@@ -1,0 +1,30 @@
+/* POPOVER */
+.commonPopOver {
+    display: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,0.65);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5;
+    list-style: none;
+    -webkit-font-feature-settings: 'tnum';
+    font-feature-settings: 'tnum';
+    position: absolute;
+    z-index: 1050;
+    height: 100px;
+    width: 100px;
+    background: red;
+}
+.griddle-table-heading-cell {
+  position: relative;
+}
+
+.IconColor{
+    background: green;
+}
+.popOverhideHelper .showPop{
+    display: block;
+}

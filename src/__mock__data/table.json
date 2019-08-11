@@ -1,0 +1,45 @@
+{
+    "columnHeading" : [
+        {
+            "field" : "id",
+            "displayName" : "ID",
+            "sort" : true,
+            "filter" : true,
+            "routeLink" : true,
+            "defautDisplay":false
+        },
+        {
+            "field" : "name",
+            "displayName" : "Name",
+            "sort" : true,
+            "filter" : true,
+            "routeLink" : true,
+            "defautDisplay":true
+        },
+        {
+            "field" : "visible",
+            "displayName" : "Visible YEs",
+            "sort" : true,
+            "filter" : true,
+            "routeLink" : true,
+            "defautDisplay":false
+        }
+    ],
+    "rowData" : [
+        {
+            "id": 1,
+            "name" : "kiran",
+            "visible": "Mike"
+        },
+        {
+            "id": 2,
+            "name" : "tinku",
+            "visible": "run"
+        },
+        {
+            "id": 3,
+            "name" : "war",
+            "visible": "new"
+        }
+    ]
+}

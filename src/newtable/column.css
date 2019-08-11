@@ -1,0 +1,8 @@
+.Table-Col-Action {
+    width: 30%;
+    display: inline-block;
+}.Table-Input-Layer {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
