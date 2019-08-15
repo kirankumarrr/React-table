@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import TableShuffle from './newtable/suffle'
 import * as serviceWorker from './serviceWorker';
+import IndexPage from "./PaginationWork/IndexPage"
 
-ReactDOM.render(<TableShuffle />, document.getElementById('root'));
+ReactDOM.render(<IndexPage />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
