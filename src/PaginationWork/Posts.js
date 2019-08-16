@@ -1,21 +1,11 @@
 import React from 'react'
 
-const Posts = ({ posts, loading }) => {
-    if (loading) {
-        return <h1>loading</h1>
-    }
+const Posts = ({ posts }) => {
     return (
         <div>
             <h1>POSTS </h1>
             <ul>
-                {
-
-                    posts.map(post =>
-                        (
-                            <li key={post.id}>{post.title}</li>
-                        )
-                    )
-                }
+                {posts.map(post => (<li style={{ textAlign: 'left' }} key={post.id}>{post.title}</li>))}
             </ul>
         </div>
     )

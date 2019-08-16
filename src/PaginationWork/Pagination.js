@@ -1,29 +1,37 @@
 import React from 'react'
-
-const Pagination = ({ postsPerPage, totalPost, paginateCurrentData, paginatePerData, currentPage, nextPage, prePage }) => {
+import PageNeighbours from "./PageNeighbours/PageNeighbours"
+import DefaultPagination from './PageNeighbours/DefaultPagination';
+const Pagination = ({ indexOfLastPage, indexOfFirstPage, postsPerPage, totalPost, paginateCurrentData, paginatePerData, currentPage, nextPage, prePage }) => {
     const paginationNumber = []
     for (let i = 1; i <= Math.ceil(totalPost / postsPerPage); i++) {
         paginationNumber.push(i);
     }
+
+    const pgEnd = Math.ceil(totalPost / postsPerPage)
+
     const pagePerData = [1, 2, 3, 5, 10, 20]
     return (
         <div>
             <div>
                 <h1>No of Records</h1>
-                <span >{(currentPage - 1) * Math.ceil(totalPost / postsPerPage)}--{(currentPage) * Math.ceil(totalPost / postsPerPage)}**** {totalPost}</span>
+                <span >{indexOfFirstPage}--{indexOfLastPage}**** {totalPost}</span>
                 <h1>Pagination</h1>
+
                 {
-                    currentPage === 1 ? (<span className="glyphicon glyphicon-chevron-left" aria-hidden="true" style={{ color: 'red', cursor: 'not-allowed' }}></span>) : (<span className="glyphicon glyphicon-chevron-left" aria-hidden="true" onClick={() => prePage(currentPage)}  ></span>)
+                    currentPage === 1 ? (<span className="glyphicon glyphicon-chevron-left" aria-hidden="true" style={{ color: 'red', cursor: 'not-allowed' }}></span>) : (<span className="glyphicon glyphicon-chevron-left" aria-hidden="true" onClick={() => prePage(currentPage)} style={{ cursor: 'pointer' }}></span>)
                 }
+                {paginationNumber.length > 5 ? (
+                    <PageNeighbours
+                        paginationNumber={paginationNumber}
+                        currentPage={currentPage}
+                        pgEnd={pgEnd}
+                        paginateCurrentData={paginateCurrentData} />)
+                    : (<DefaultPagination
+                        paginationNumber={paginationNumber}
+                        currentPage={currentPage}
+                        paginateCurrentData={paginateCurrentData} />)}
                 {
-                    paginationNumber.map(number => {
-                        return currentPage === number ?
-                            (<span key={number} style={{ width: '20px', padding: "10px", background: 'green', cursor: 'pointer', marginRight: '10px' }} onClick={() => paginateCurrentData(number)}>{number}</span>
-                            ) : (<span key={number} style={{ width: '20px', padding: "10px", cursor: 'pointer', marginRight: '10px' }} onClick={() => paginateCurrentData(number)}>{number}</span>)
-                    })
-                }
-                {
-                    currentPage === Math.ceil(totalPost / postsPerPage) ? (<span className="glyphicon glyphicon-chevron-right" aria-hidden="true" style={{ color: 'red', cursor: 'not-allowed' }}></span>) : (<span className="glyphicon glyphicon-chevron-right" aria-hidden="true" onClick={() => nextPage(currentPage)}></span>)
+                    currentPage === Math.ceil(totalPost / postsPerPage) ? (<span className="glyphicon glyphicon-chevron-right" aria-hidden="true" style={{ color: 'red', cursor: 'not-allowed' }}></span>) : (<span style={{ cursor: 'pointer' }} className="glyphicon glyphicon-chevron-right" aria-hidden="true" onClick={() => nextPage(currentPage)}></span>)
                 }
 
             </div>
@@ -32,10 +40,8 @@ const Pagination = ({ postsPerPage, totalPost, paginateCurrentData, paginatePerD
                 {
                     pagePerData.map(pgnum => {
                         return postsPerPage === pgnum ?
-                            (<span key={pgnum} style={{ width: '20px', paddingRight: "10px", background: 'green', cursor: 'pointer', }} onClick={() => paginatePerData(pgnum)}>{pgnum}</span>) : (<span key={pgnum} style={{ width: '20px', paddingRight: "10px", cursor: 'pointer' }} onClick={() => paginatePerData(pgnum)}>{pgnum}</span>)
-                    }
-
-                    )
+                            (<span key={pgnum} style={{ padding: '5px', background: '#91f591', cursor: 'pointer', }} onClick={() => paginatePerData(pgnum)}>{pgnum}</span>) : (<span key={pgnum} style={{ padding: '5px', cursor: 'pointer' }} onClick={() => paginatePerData(pgnum)}>{pgnum}</span>)
+                    })
                 }
             </div>
         </div >

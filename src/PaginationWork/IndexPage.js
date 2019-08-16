@@ -1,26 +1,23 @@
 import React, { useEffect, useState } from 'react'
-import axios from "axios"
 import Pagination from "./Pagination"
 import Posts from "./Posts"
+import { useDispatch, useSelector } from 'react-redux'
+import { getPosts } from "../actions/postActions"
+
+
 const IndexPage = () => {
-    const [posts, setPosts] = useState([])
+    const dispatch = useDispatch()
+
+    const { posts } = useSelector(state => state.postReducer)
+    //Reducer 
+
     const [loading, setLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
     const [postsPerPage, setPostsPerPage] = useState(10)
 
     useEffect(() => {
-        const fetchPosts = async () => {
-            setLoading(true);
-            const res = await axios.get('https://jsonplaceholder.typicode.com/posts')
-            console.log(res)
-            setPosts(res.data);
-            setLoading(false)
-        }
-        fetchPosts()
-    }, [])
-    console.log(posts)
-
-    //Pagination Code 
+        dispatch(getPosts())
+    }, [dispatch])
 
     //Get current Post
     const indexOfLastPage = currentPage * postsPerPage;
@@ -39,7 +36,7 @@ const IndexPage = () => {
     return (
         <div>
             IndexPage
-            <Posts posts={currentPosts} loading={loading} />
+           <Posts posts={currentPosts} loading={loading} />
             <Pagination
                 postsPerPage={postsPerPage}
                 totalPost={posts.length}
@@ -47,7 +44,9 @@ const IndexPage = () => {
                 paginatePerData={paginatePerData}
                 currentPage={currentPage}
                 nextPage={nextPage}
-                prePage={prePage} />
+                prePage={prePage}
+                indexOfLastPage={indexOfLastPage}
+                indexOfFirstPage={indexOfFirstPage} />
         </div>
     )
 }
