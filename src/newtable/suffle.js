@@ -18,15 +18,7 @@ export default class TableShuffle extends Component {
             this.setState({ tableResponse: { ...tableResponse, columnHeading: localStorageColumns, rowData: table.rowData } })
         }
     }
-    // componentDidUpdate(prevState) {
-    //     const { tableResponse } = this.state;
-    //     if (prevState.tableResponse !== tableResponse) {
-    //         this.setState({ tableResponse: table })
-    //     }
-
-    // }
-    //ColumnChangeEvent
-    //will receive format from ColumnReOrdering component
+    
     onColumnLayoutChange = (ColumnReOrderingHeading) => {
         const { tableColumnLocalStorage, tableResponse } = this.state;
         console.log("Working onColumnLayoutChange", ColumnReOrderingHeading)
@@ -49,7 +41,6 @@ export default class TableShuffle extends Component {
                         onColumnLayoutChange={this.onColumnLayoutChange}
                         ApplyBtnEvt={this.ApplyBtnEvt} />
                 }
-
             </div>
         )
     }
