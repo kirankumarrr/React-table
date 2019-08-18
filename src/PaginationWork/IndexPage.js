@@ -8,10 +8,9 @@ import { getPosts } from "../actions/postActions"
 const IndexPage = () => {
     const dispatch = useDispatch()
 
-    const { posts } = useSelector(state => state.postReducer)
+    const { posts, loader } = useSelector(state => state.postReducer)
+    console.log('Loading', loader)
     //Reducer 
-
-    const [loading, setLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
     const [postsPerPage, setPostsPerPage] = useState(10)
 
@@ -36,7 +35,7 @@ const IndexPage = () => {
     return (
         <div>
             IndexPage
-           <Posts posts={currentPosts} loading={loading} />
+           <Posts posts={currentPosts} loading={loader} />
             <Pagination
                 postsPerPage={postsPerPage}
                 totalPost={posts.length}
