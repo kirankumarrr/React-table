@@ -18,7 +18,7 @@ const Pagination = ({ indexOfLastPage, indexOfFirstPage, postsPerPage, totalPost
                 <h1>Pagination</h1>
 
                 {
-                    currentPage === 1 ? (<span className="glyphicon glyphicon-chevron-left" aria-hidden="true" style={{ color: 'red', cursor: 'not-allowed' }}></span>) : (<span className="glyphicon glyphicon-chevron-left" aria-hidden="true" onClick={() => prePage(currentPage)} style={{ cursor: 'pointer' }}></span>)
+                    currentPage === 1 ? (<span className="fa fa-angle-left" aria-hidden="true" style={{ color: 'red', cursor: 'not-allowed' }}></span>) : (<span className="fa fa-angle-left" aria-hidden="true" onClick={() => prePage(currentPage)} style={{ cursor: 'pointer' }}></span>)
                 }
                 {paginationNumber.length > 5 ? (
                     <PageNeighbours
@@ -31,7 +31,7 @@ const Pagination = ({ indexOfLastPage, indexOfFirstPage, postsPerPage, totalPost
                         currentPage={currentPage}
                         paginateCurrentData={paginateCurrentData} />)}
                 {
-                    currentPage === Math.ceil(totalPost / postsPerPage) ? (<span className="glyphicon glyphicon-chevron-right" aria-hidden="true" style={{ color: 'red', cursor: 'not-allowed' }}></span>) : (<span style={{ cursor: 'pointer' }} className="glyphicon glyphicon-chevron-right" aria-hidden="true" onClick={() => nextPage(currentPage)}></span>)
+                    currentPage === Math.ceil(totalPost / postsPerPage) ? (<span className="fa fa-angle-right" aria-hidden="true" style={{ color: 'red', cursor: 'not-allowed' }}></span>) : (<span style={{ cursor: 'pointer' }} className="fa fa-angle-right" aria-hidden="true" onClick={() => nextPage(currentPage)}></span>)
                 }
 
             </div>

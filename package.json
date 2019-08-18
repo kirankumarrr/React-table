@@ -10,12 +10,15 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0"
+    "redux-mock-store": "^1.5.3",
+    "redux-thunk": "^2.3.0",
+    "moxios": "^0.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test-cov": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -35,7 +38,8 @@
   },
   "devDependencies": {
     "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0"
+    "enzyme-adapter-react-16": "^1.14.0",
+    "moxios": "^0.4.0"
   },
   "jest": {
     "coverageReporters": [
