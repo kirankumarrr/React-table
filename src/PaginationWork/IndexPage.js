@@ -9,7 +9,7 @@ const IndexPage = () => {
     const dispatch = useDispatch()
 
     const { posts, loader } = useSelector(state => state.postReducer)
-    console.log('Loading', loader)
+    // console.log('Loading', loader)
     //Reducer 
     const [currentPage, setCurrentPage] = useState(1)
     const [postsPerPage, setPostsPerPage] = useState(10)
