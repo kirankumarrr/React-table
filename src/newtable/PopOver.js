@@ -11,7 +11,6 @@ export default class PopOver extends Component {
         }
     }
     handleOutsideClick = (event) => {
-        debugger
         const { activepopOver } = this.state
         //event.target.closest(`.PopOverLayer`)
         if (event.target.closest(`.PopOverLayer-${activepopOver}`) === null || activepopOver === "") {

@@ -1,0 +1,36 @@
+.commonSearchInput.filter-input-section {
+    position: relative;
+    width: 323px;
+    margin: 0;
+}
+.commonSearchInput.filter-input-section .filter-input {
+    padding-left: 30px;
+    flex: 1 1;
+    padding: 7px 7px 7px 38px;
+    font-size: 15px;
+    line-height: 18px;
+    color: #484856;
+    background: #fff;
+    box-shadow: inset 0 1px 1px 0 #f0f1f1;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: normal;
+    width: 100%;
+    border: 1px solid #000;
+}
+.commonSearchInput.filter-input-section svg.react-components--icon---styles--icon {
+    fill: currentColor;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin-left: 10px;
+    top: 5px;
+    color: #414141;
+}
+.filter-input-section .magnifierIcon {
+    width: 15px;
+    height: 25px;
+    position: absolute;
+    margin-left: 10px;
+    top: 20px;
+}

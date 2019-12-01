@@ -1,0 +1,78 @@
+#filteredView .filter-list-items {
+    display: flex;
+    margin-bottom: 17px;
+    flex-wrap: wrap;
+}
+#filteredView .filter-list-items .filter-list-item {
+    background: linear-gradient(180deg, #fff 0%, #ececec 98.86%);
+   /* icon (Greyed out ) */
+    border: 1px solid #b8b8b8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: relative;
+    width: auto;
+    max-width: 240px;
+    height: 32px;
+    padding: 10px 5px 8px 11px;
+    align-items: center;
+    color: #414141;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 10px 10px 0 0;
+}
+#filteredView .filter-list-items .filter-list-item p {
+    height: 14px;
+    display: inline;
+}
+#filteredView .filter-list-items .filter-list-item .global-all-class {
+    vertical-align: top;
+}
+#filteredView .filter-list-items .filter-list-item .filter-close {
+    top: 7px;
+    right: 15px;
+    color: #c4c4c4;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 4px;
+    margin-left: 8px;
+    display: inline-block;
+    margin-top: -2px;
+}
+#filteredView .filter-list-items .filtered-remove {
+    cursor: pointer;
+    margin-left: 5px;
+    position: relative;
+    top: 16px;
+    outline: none;
+}
+#filteredView .filter-list-items .filtered-remove .react-components--icon---styles--icon {
+    vertical-align: middle;
+}
+#filteredView .filtered-display-columnName {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    min-width: 8px;
+    max-width: 133px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#filteredView .filtered-display-colon {
+    font-weight: 600;
+    vertical-align: top;
+}
+#filteredView .filtered-display-columnValue {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    width: auto;
+    max-width: 80px;
+    vertical-align: top;
+}
+

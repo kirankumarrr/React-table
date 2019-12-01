@@ -1,45 +1,86 @@
 {
-    "columnHeading" : [
+    "columnHeaders": [
         {
-            "field" : "id",
-            "displayName" : "ID",
-            "sort" : true,
-            "filter" : true,
-            "routeLink" : true,
-            "defautDisplay":false
+            "id": "firstName",
+            "label": "First Name",
+            "sortable": "true",
+            "filterable": "true"
         },
         {
-            "field" : "name",
-            "displayName" : "Name",
-            "sort" : true,
-            "filter" : true,
-            "routeLink" : true,
-            "defautDisplay":true
+            "id": "lastName",
+            "label": "Last Name",
+            "sortable": "true",
+            "filterable": "true"
         },
         {
-            "field" : "visible",
-            "displayName" : "Visible YEs",
-            "sort" : true,
-            "filter" : true,
-            "routeLink" : true,
-            "defautDisplay":false
+            "id": "dateOfBirth",
+            "label": "Date of Birth",
+            "sortable": "false",
+            "filterable": "true"
+        },
+        {
+            "id": "designation",
+            "label": "Designation",
+            "sortable": "true",
+            "filterable": "true"
+        },
+        {
+            "id": "department",
+            "label": "Department",
+            "sortable": "true",
+            "filterable": "false"
         }
     ],
-    "rowData" : [
+    "rowData": [
         {
-            "id": 1,
-            "name" : "kiran",
-            "visible": "Mike"
+            "id": "user_id_1",
+            "data": [
+                {
+                    "id": "firstName",
+                    "value": "John"
+                },
+                {
+                    "id": "lastName",
+                    "value": "Smith"
+                },
+                {
+                    "id": "dateOfBirth",
+                    "value": "07-11-1992"
+                },
+                {
+                    "id": "designation",
+                    "value": "Software Engineer"
+                },
+                {
+                    "id": "department",
+                    "value": "Web"
+                }
+            ]
         },
         {
-            "id": 2,
-            "name" : "tinku",
-            "visible": "run"
-        },
-        {
-            "id": 3,
-            "name" : "war",
-            "visible": "new"
+            "id": "user_id_2",
+            "data": [
+                {
+                    "id": "firstName",
+                    "value": "Jane"
+                },
+                {
+                    "id": "lastName",
+                    "value": "Doe"
+                },
+                {
+                    "id": "dateOfBirth",
+                    "value": "07-11-1995"
+                },
+                {
+                    "id": "designation",
+                    "value": "Intern"
+                },
+                {
+                    "id": "department",
+                    "value": "Mobile"
+                }
+            ]
         }
     ]
 }
